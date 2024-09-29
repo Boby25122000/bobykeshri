@@ -66,6 +66,14 @@ section {
     margin-left: 170px;
     }
 
+     h1 {     
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-align: left;
+        margin-left: 170px;
+        }
+
     p {
         font-size: 1.2rem;
         text-align: justify;
