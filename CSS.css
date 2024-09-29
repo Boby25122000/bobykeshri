@@ -38,8 +38,8 @@ section {
 }
 
 #home {
-    background-image: url(Photo/background.jpg);
-    color: white;
+    background-image: url(Photo/home page background.jpg);
+    color: #f4f4f4;
     
     h1 {
         font-size: 5rem;
@@ -49,6 +49,7 @@ section {
     }
 
     p {
+        margin-top: 20px;
         font-size: 2rem;
         text-align: center;
     }
