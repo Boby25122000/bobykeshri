@@ -38,20 +38,14 @@ section {
 }
 
 #home {
-    background-image: url(Photo/home page background.jpg);
-    color: #f4f4f4;
+    background-image: url("Photo/home page background1.jpg");
+    color: red;
     
-    h1 {
-        font-size: 5rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
     p {
-        margin-top: 20px;
         font-size: 2rem;
         text-align: center;
+        margin-top: 190px;
+        margin-bottom: 15px;
     }
 }
 
