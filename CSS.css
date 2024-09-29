@@ -128,8 +128,7 @@ section {
 button {
     padding: 10px 20px;
     font-size: 1.6rem;
-    background-color: #fff;
-    color: black;
+    background: linear-gradient(to right, black, white);
     font-weight: bold;
     border: none;
     border-radius: 5px;
