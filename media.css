@@ -1,0 +1,42 @@
+@media (max-width: 600px) {
+    #nav {
+        padding: 1vh 6vw;
+    }
+
+    /* #nav .logo {
+        height: 80px;
+        width: 80px;
+    } */
+
+    /* #nav .logo img {
+        height: 70px;
+        width: 70px;
+    } */
+
+    #nav .nav-list a {
+        font-size: 1rem;
+        display: none;
+    }
+
+    #nav .nav-list .ri-menu-3-fill {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    /* !----nav2 section---- */
+    #nav2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        /* justify-content: center; */
+        padding: 2px;
+    }
+
+    #nav2 .info {
+        /* padding: 2px; */
+        padding-left: 6vw;
+    }
+}
