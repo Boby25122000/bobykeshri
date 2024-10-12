@@ -1,42 +1,272 @@
+/* --------- Mobile Styles (max-width: 600px) --------- */
+
 @media (max-width: 600px) {
+  
+    /* ---------- General Adjustments ---------- */
+    
+    body {
+      background-repeat: no-repeat; /* Adjust background for smaller screens */
+    }
+  
+    section {
+      margin-top: 0; /* Remove any negative margins */
+    }
+  
+    /* ---------- Header / Navigation ---------- */
+  
     #nav {
-        padding: 1vh 6vw;
+      flex-direction: column;
+      height: auto;
+      padding: 2vh 2vw;
+      background-color: rgba(0, 0, 0, 0.222); /* Increase opacity for better readability */
+      flex-flow: row nowrap;
+      display: inline-flex;
     }
-
-    /* #nav .logo {
-        height: 80px;
-        width: 80px;
-    } */
-
-    /* #nav .logo img {
-        height: 70px;
-        width: 70px;
-    } */
-
+  
+    #nav .logo {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      border: 3px solid white;
+      align-self: flex-start;
+      margin-left: 10px;
+    }
+  
+    #nav .logo img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  
+    #nav p {
+      margin-right: 40px;
+      font-size: 1.1rem;
+      align-items: flex-end;
+    }
+  
+    #nav .nav-list {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 0 0;
+      width: 100%;
+    }
+  
     #nav .nav-list a {
+      font-size: 1.2rem;
+      padding: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Show the hamburger icon */
+    #nav .nav-list i {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      color: white;
+    }
+  
+    /* Hide the default nav-list and show sidebar toggle */
+    #nav .nav-list {
+      display: none;
+    }
+  
+  /* ---------- Sidebar ---------- */
+  
+  .sidebar {
+    width: 100%;
+    top: 0;
+    height: 100%;
+    padding: 20px;
+    border-top-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.222);
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Hide sidebar by default */
+  }
+
+  /* When sidebar is active (you'll need to toggle this class via JavaScript) */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar .logo1 {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .sidebar .logo1 i {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  #nav .nav-list-sidebar {
+    width: 100%;
+  }
+
+  #nav .nav-list-sidebar a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    border: none;
+    background-color: transparent;
+  }
+
+    /* ---------- Home Section ---------- */
+  
+    #home {
+      padding: 80px 20px 20px 20px;
+      background-position: top;
+      
+      h1 {
+        font-size: 1.7rem;
+        text-align: left;
+        margin-top: 5px;
+      }
+  
+      h4 {
+        margin-top: 100px;
         font-size: 1rem;
-        display: none;
+        text-align: left;
+      }
+  
+      p {
+        font-size: 1rem;
+        text-align: left;
+      }
+  
+      .social-icons {
+        margin-top: 100px;
+        text-align: left;
+      }
+  
+      .social-icons img {
+        width: 20px;
+        margin: 0 5px;
+      }
+    }
+  
+    /* ---------- About Section ---------- */
+  
+    #about {
+      padding: 80px 20px 20px 20px;
+    }
+  
+    .about-me-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-me-image {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+  
+    .about-me-details {
+      max-width: 100%;
+    }
+  
+    .about-me-details h2 {
+      font-size: 2rem;
+      text-align: left;
+    }
+  
+    .about-me-details p {
+      font-size: 1rem;
+    }
+  
+    .education h3 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      text-align: left;
+    }
+  
+    .education ul {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+  
+    /* ---------- Skills Section ---------- */
+  
+    #skill {
+      padding: 80px 20px 20px 20px;
     }
 
-    #nav .nav-list .ri-menu-3-fill {
-        display: block;
-        font-size: 1.8rem;
-        cursor: pointer;
+    #skill h2 {
+        font-size: 2rem;
     }
 
-    /* !----nav2 section---- */
-    #nav2 {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        /* justify-content: center; */
-        padding: 2px;
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
-
-    #nav2 .info {
-        /* padding: 2px; */
-        padding-left: 6vw;
+  
+    .skill-card {
+      width: 90%;
+      height: 150px;
     }
-}
+  
+    .card-front, .card-back {
+      font-size: 1rem;
+    }
+  
+    /* ---------- Projects Section ---------- */
+  
+    #projects {
+      padding: 80px 20px 20px 20px;
+    }
+    #projects h2 {
+        font-size: 2rem;
+    }
+  
+    .project-list {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .project-name {
+      font-size: 1rem;
+    }
+  
+    .image-wrapper img {
+      width: 100%;
+    }
+  
+    /* ---------- Footer ---------- */
+  
+    footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+    }
+  
+    .foot, .cont, .email {
+      margin-left: 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    /* ---------- Additional Adjustments ---------- */
+  
+    /* Ensure images are responsive */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Adjust font sizes for better readability */
+    body, p, h1, h2, h3, h4, h5, h6, a {
+      font-size: 100%;
+    }
+  
+  }
+  
