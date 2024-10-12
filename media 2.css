@@ -1,0 +1,248 @@
+/* --------- Tablet Styles (min-width: 600px and max-width: 1000px) --------- */
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    
+    /* ---------- General Adjustments ---------- */
+    
+    body {
+        background-repeat: no-repeat; /* Adjust background for tablet screens */
+    }
+
+    section {
+        padding: 100px 30px 30px 30px; /* Adjust padding for better spacing */
+        margin-top: 0; /* Ensure no negative margins */
+    }
+
+    /* ---------- Header / Navigation ---------- */
+
+    #nav {
+        height: 80px;
+        padding: 2vh 3vw;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Space between logo and nav */
+        background-color: rgba(0, 0, 0, 0.222); /* Slightly opaque for readability */
+    }
+
+    #nav .logo {
+        height: 55px;
+        width: 55px;
+        border: 3px solid white;
+        margin-top: 0; /* Center vertically */
+    }
+
+    #nav .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    #nav p {
+        margin-left: 1px;
+        font-size: 1.5rem;
+    }
+
+    #nav .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 0; /* Remove large left margin */
+        gap: 1.2vh;
+    }
+
+    #nav .nav-list a {
+        font-size: 1rem;
+        padding: 5px 8px;
+    }
+
+    #nav .nav-list i {
+        display: block; /* Show hamburger icon on tablets */
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+
+    /* ---------- Sidebar ---------- */
+
+    .sidebar {
+        width: 60%; /* Reduce sidebar width for tablets */
+        left: 40%; /* Adjust positioning */
+        padding: 15px;
+        border-top-left-radius: 25px;
+    }
+
+    /* Adjust sidebar logo and close icon */
+    .sidebar .logo1 {
+        margin: 15px;
+    }
+
+    .sidebar .logo1 i {
+        margin-left: 80px; /* Adjust margin for tablet */
+    }
+
+    #nav .nav-list-sidebar a {
+        width: 120%; /* Slightly reduce width */
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    /* ---------- Home Section ---------- */
+
+    #home {
+        padding: 100px 30px 30px 30px;
+        background-position: center;
+    }
+
+    #home h1 {
+        font-size: 3rem;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    #home h4 {
+        margin-top: 150px;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    #home p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    #home .social-icons {
+        margin-top: 150px;
+        text-align: left;
+    }
+
+    #home .social-icons img {
+        width: 25px;
+        margin: 0 7px;
+    }
+
+    /* ---------- About Section ---------- */
+
+    #about {
+        padding: 100px 30px 30px 30px;
+    }
+
+    .about-me-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .about-me-image {
+        width: 120px;
+        margin-bottom: 0;
+    }
+
+    .about-me-details h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .about-me-details p {
+        font-size: 1.2rem;
+    }
+
+    .education h3 {
+        font-size: 1.7rem;
+        margin-top: 25px;
+        text-align: left;
+    }
+
+    .education ul {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .education p {
+        color: rgba(255, 255, 255, 0.489);
+        font-size: 1.2rem;
+    }
+
+    /* ---------- Skills Section ---------- */
+
+    #skill {
+        padding: 100px 30px 30px 30px;
+    }
+
+    #skill h2 {
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .skill-card {
+        width: 250px;
+        height: 180px;
+    }
+
+    .card-front {
+        font-size: 1.3rem;
+    }
+
+    .card-back {
+        font-size: 1.1rem;
+    }
+
+    /* ---------- Projects Section ---------- */
+
+    #projects {
+        padding: 100px 30px 30px 30px;
+    }
+
+    #projects h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .project-name {
+        font-size: 1.2rem;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+    }
+
+    /* ---------- Footer ---------- */
+
+    footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 30px;
+    }
+
+    .foot, .cont, .email {
+        margin-left: 20px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .project-container:hover .image-wrapper img {
+        display: block;
+        opacity: 1;
+    }
+
+    /* ---------- Additional Adjustments ---------- */
+
+    /* Ensure images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust font sizes for better readability */
+    body, p, h1, h2, h3, h4, h5, h6, a {
+        font-size: 100%;
+    }
+}
