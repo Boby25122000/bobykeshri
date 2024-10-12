@@ -1,19 +1,156 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: black;
     background-size: cover;
     background-position: center;
     background-repeat: repeat-x;
-    color: #333;
+    color: white;
+    margin-bottom: 0px;
 }
 
-header {
-    background-color: #3a6978;
-    padding: 1rem 0;
+section {
+    margin-top: -20px; /* Remove or avoid negative margins */
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+
+  #nav {
+    height: 100px;
+    /* height: auto; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh 4vw 3vh;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.222);
+    z-index: 999;
+    position: fixed;
+  }
+#nav p {
+        margin-top: 10px;
+        color: #f39c12;
+        font-size: 2.5rem;
+        margin-left: 10px;
+    }
+
+  
+  #nav .logo {
+    margin-top: 2.5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 5px solid white;
+  } 
+  
+   #nav .logo img {
+    height: 71px;
+    width: 71px;
+    border-radius: 50%;
+  } 
+  
+#nav .nav-list {
+    margin-top: 10px;
+    display: flex;
+    gap: 4vh;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 380px;
+  }  
+
+#nav .nav-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#nav .nav-list i {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    display: none;
+}
+
+#nav .nav-list a:hover {
+  color: blue;
+  transition: 0.3s ease;
+  transform: translateY(4px);
+}
+
+/* !------Sidebar---- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 1000;
+  background-color: rgba(167, 154, 154, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  display: none;
+  border-top-left-radius: 30px;
+  left: 60%;
+  transition: left 0.3s ease;
+  padding: 5px;
+}
+
+
+.sidebar .logo1 {
+  margin: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .logo1 i {
+  margin-left: 100px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#nav .nav-list-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+#nav .nav-list-sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  /* padding-right: 10px; */
+  width: 140%;
+  border: 1px solid #fafaf1;
+  border-bottom: none;
+  border-top: none;
+  border-radius: 10px;
+}
+
+#nav .nav-list-sidebar a:hover {
+  color: blue;
+  transition: 0.3s ease;
+  background-color: #fafaf1;
 }
 
 nav ul {
@@ -34,225 +171,273 @@ nav ul li a {
 
 section {
     padding: 2rem 0;
-    text-align: center;
 }
 
-#home {
-    background-image: url("Photo/home page background1.jpg");
-    color: red;
+/* ---------- Home ---------- */
+
+#home {color: white;
+    text-align: justify;
+    justify-content: right;
+    align-items: right;
+    padding: 110px 40px 20px 40px;
+    background-image: url(Photo/back.jpg);  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     
-    p {
+    h1 {     
+        font-size: 5rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    h4 {     
+        margin-top: 200px;
         font-size: 2rem;
-        text-align: center;
-        margin-top: 190px;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    p { 
+        font-size: 2rem;
+        margin-bottom: 8px;
+        text-align: left;
+    } 
+
+    .social-icons {
+        width: 100%;
+        margin-top: 180px;
+    }
+    
+    .social-icons img {
+        margin: 0 10px;
+        display: inline-block;  /* Makes sure icons are displayed properly */
+        vertical-align: middle; /* Centers icons vertically */
+        width: 30px;
+    }    
+
+    .social-icon:hover {
+        color: #0056b3;  /* Optional: makes the icon slightly transparent on hover */
     }
 }
 
+/* ---------- About ---------- */
+
 #about {
-    padding: 20px;
-    background-color: rgb(33, 32, 32);
     color: white;
     text-align: justify;
     justify-content: right;
     align-items: right;
-    height: 130vh;
+    padding: 110px 40px 20px 40px;
+    background-image: url(Photo/backaboutme.png);  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 
-    h2 {     
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    text-align: left;
-    margin-left: 170px;
-    }
-
-     h1 {     
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 8px;
-        text-align: left;
-        margin-left: 170px;
-        }
-
-    h4 {     
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-align: left;
-            margin-left: 170px;
-            }
-
-    p {
-        font-size: 1.2rem;
-        text-align: justify;
-        line-height: 1.6;
-        margin-left: 220px;
-    }
-
-} 
+}
 
 .about-me-container {
-    display: flex; /* Use Flexbox */
-    align-items: flex-start; /* Align items at the start (top) */
-    margin: 20px; /* Add margin around the container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures spacing between the image and text */
+    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+    gap: 10px; /* Space between the image and text */
 }
 
 .about-me-image {
-    width: 300px; /* Set the width of the image */
-    height: 300; /* Maintain aspect ratio */
-    border-radius: 20%; /* Optional: make the image circular */
-    margin-right: 20px; /* Space between image and text */
+    width: 100px; /* Restricts the image size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow to the image */
 }
 
+
 .about-me-details {
-    max-width: 1000px; /* Set a max width for the text container */
-    max-height: 100px;
+    max-width: 900px; /* Restricts the text width */
 }
 
 .about-me-details h2 {
-    margin: 0; /* Remove default margin */
+    margin-bottom: 10px;
+    font-size: 3rem;
 }
 
 .about-me-details p {
-    margin-top: 10px; /* Space between heading and details */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.489);
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-left: 200px;
+.education h3 {
+    font-size: 2rem;
+    margin-top: 15px;
+}
+.education ul {
+    font-size: 1.3rem;
+    margin-left: 25px;
 }
 
-/* Styling for the toggle buttons */
-button {
-    padding: 10px 20px;
-    font-size: 1.6rem;
-    background: linear-gradient(to right, black, white);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 70px;   
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Styling for sections */
-.skills-section, .soft-skills-section, .education-section {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
-}
-
-.skills-section h3, .soft-skills-section h3, .education-section h3 {
+.education p {
+    color: rgba(255, 255, 255, 0.489);
     font-size: 1.5rem;
 }
-
-.skills-section ul, .soft-skills-section ul, .education-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 5px
-}
-
-#projects {
-    background-color: rgb(33, 32, 32);
-    color: white;
-
-    h2 {     
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: left;
-        margin-left: 100PX;
-        }
-}
-
-#contact {
-    background-color: rgb(33, 32, 32);
-    color: white;
-
-    h2 {     
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-        }
-}
-
-/* Set the size of the project image container */
-.project-list {
-    display: flex;
-    justify-content: center; /* Align projects in the center */
-    gap: 20px; /* Space between each project */
-    flex-wrap: wrap; /* Allows wrapping to the next row if needed */
-    padding: 20px; /* Add some padding around the container */
-}
-
-.project-container {
-    width: 300px; /* Adjust the width as needed */
-    position: relative; /* Relative position for the overlay */
-    margin: 20px auto; /* Centering the container */
     
+
+/* ---------- Skill --------- */
+
+#skill {
+    color: white;
+    text-align: justify;
+    justify-content: right;
+    align-items: right;
+    padding: 110px 40px 20px 40px;
+    background-image: url(Photo/backaboutme.png);  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+    }
 }
 
-.image-wrapper {
-    position: relative; /* Make the image and overlay overlap */
-    width: 100%;
-    height: 200px; /* Adjust the height as needed */
-    overflow: hidden;
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures that cards stay in a single horizontal line */
+    justify-content: space-around; /* Evenly spaces the rectangles horizontally */
+    gap: 20px; /* Space between the cards */
+    max-width: 100%; /* Full width */
+    margin: auto;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
 }
 
-.image-wrapper img {
+.skill-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Enables the 3D effect */
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-front, .card-back {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
-    display: block;
+    position: absolute;
+    backface-visibility: hidden; /* Prevents back side from showing initially */
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Overlay that will appear on hover */
-.overlay {
+/* Front side of the card */
+.card-front {
+    background-color: #f39c12; /* Blue background */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Back side of the card (hidden initially) */
+.card-back {
+    background-color: #197cb5; /* Red background */
+    color: white;
+    font-size: 1.2rem;
+    transform: rotateY(180deg); /* Starts flipped */
+}
+
+/* Flipping the card on hover */
+.skill-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.skill-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Optional: Positioning to make sure both sides are in place */
+.skill-card .card-front,
+.skill-card .card-back {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
-/* Project name styling inside the overlay */
-.project-name {
+
+/* ---------- Project ---------*/
+
+#projects {
     color: white;
+    text-align: justify;
+    justify-content: right;
+    align-items: right;
+    padding: 110px 40px 20px 40px;
+    background-image: url(Photo/backaboutme.png);  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.project-container {
+    position: relative;
+}
+
+.project-name {
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
-    padding: 10px;
+    cursor: pointer;
 }
 
-/* Show the overlay with project name on hover */
-.image-wrapper:hover .overlay {
-    opacity: 1; /* Show the overlay when hovering */
+.image-wrapper img {
+    display: none;
+    width: 100%;
+    transition: opacity 0.3s ease;
 }
 
-.image-wrapper a {
-    text-decoration: none; /* No underline on links */
+/* Show the image when hovering over the project container */
+.project-container:hover .image-wrapper img {
+    display: block;
+    opacity: 1;
 }
- 
+
+/* ---------- Footer ---------- */
+
 footer {
+    display: flex;
     background-color: #3a6978;
     color: white;
     padding: 1rem 0;
     text-align: center;
 }
 
+.foot {
+    margin-left: 450px;
+}
+
+.cont {
+    text-align: right;
+    margin-left: 350px;
+}
+
+.email {
+    text-align: right;
+    margin-left: 50px;
+}
